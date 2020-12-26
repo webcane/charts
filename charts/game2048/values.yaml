@@ -36,6 +36,9 @@ service:
   type: NodePort
   port: 80
 
+ingress:
+  enabled: false
+
 resources:
   limits:
     cpu: 100m
