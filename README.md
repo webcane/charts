@@ -1,6 +1,6 @@
 # Charts Repo Actions Demo
 
-[![](https://github.com/helm/charts-repo-actions-demo/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/helm/charts-repo-actions-demo/actions)
+[![](https://github.com/webcane/charts/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/webcane/charts/actions)
 
 Example project to demo testing and hosting a chart repository with GitHub Pages and Actions.
 
@@ -16,10 +16,7 @@ Example project to demo testing and hosting a chart repository with GitHub Pages
 
 ## Chart Sources
 
-* `charts/example-v1`: Sample chart with API version v1
-* `charts/example-v2`: Sample chart with API version v2
-* `charts/dependencies-v1`: Simple chart with API version v1 to test dependencies from an external Charts repo
-* `charts/dependencies-v2`: Simple chart with API version v2 to test dependencies from an external Charts repo
+* `charts/game2048`: 2048 game helm chart
 
 ## How-To
 
@@ -38,4 +35,4 @@ The prerequisites listed in the READMEs for [actions](#actions) above _must_ be 
 
 * The [Lint and Test Charts](/.github/workflows/lint-test.yaml) workflow uses [@helm/kind-action](https://www.github.com/helm/kind-action) GitHub Action to spin up a [kind](https://kind.sigs.k8s.io/) Kubernetes cluster, and [@helm/chart-testing-action](https://www.github.com/helm/chart-testing-action) to lint and test your charts on every Pull Request and push
 * The [Release Charts](/.github/workflows/release.yaml) workflow uses [@helm/chart-releaser-action](https://www.github.com/helm/chart-releaser-action) to turn your GitHub project into a self-hosted Helm chart repo. It does this – during every push to `master` – by checking each chart in your project, and whenever there's a new chart version, creates a corresponding [GitHub release](https://help.github.com/en/github/administering-a-repository/about-releases) named for the chart version, adds Helm chart artifacts to the release, and creates or updates an `index.yaml` file with metadata about those releases, which is then hosted on GitHub Pages
-* You should now be able to add your charts repo with `helm repo add <owner> https://<owner>.github.io/<project>`
+* You should now be able to add your charts repo with `helm repo add webcane https://webcane.github.io/charts`
