@@ -7,6 +7,6 @@ appVersion: 1.16.0
 home: https://github.com/webcane/charts
 maintainers:
   - email: webcane@yandex.com
-    name: Mikhail Niedre
+    name: webcane
 sources:
   - https://github.com/webcane/charts
